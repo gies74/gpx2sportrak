@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{01429E9C-5BA2-4298-BE05-87AAC6C8774E}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>gpx2sportrak</RootNamespace>
-    <AssemblyName>gpx2sportrak</AssemblyName>
+    <ProjectGuid>{3F54FF8E-563B-4F45-9441-22E606DABAD1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Geo</RootNamespace>
+    <AssemblyName>geo</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,21 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Coordinate.cs" />
+    <Compile Include="GPX.cs" />
+    <Compile Include="Mapsend.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="geo\geo.csproj">
-      <Project>{3f54ff8e-563b-4f45-9441-22e606dabad1}</Project>
-      <Name>geo</Name>
-    </ProjectReference>
-    <ProjectReference Include="magellan_connector\magellan_connector.csproj">
-      <Project>{f68470bc-70e0-4fba-8cc8-1311884ff88e}</Project>
-      <Name>magellan_connector</Name>
-    </ProjectReference>
+    <Compile Include="Route.cs" />
+    <Compile Include="Waypoint.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
