@@ -1,5 +1,5 @@
 bin/
 obj/
-.suo
-*.user
+.vs/
+gpx2sportrak.csproj.user
 
